@@ -16,11 +16,19 @@ export interface ChangePasswordRequest {
 }
 
 export interface EmployeeDto {
-  id: string;
+  id: number;
   email: string;
   firstName: string;
   lastName: string;
-  departmentId?: string;
+  employeeCode?: string;
+  phoneNumber?: string;
+  profilePictureUrl?: string;
+  hireDate?: string;
   jobTitle?: string;
-  // Alte campuri vor fi adaugate ulterior conform spec
+  departmentId?: string;
+  teamId?: string;
+  managerId?: string;
+  roleId?: string;
+  isFirstLogin?: boolean;
+  workStatus?: number; // 0=InOffice, 1=Remote, 2=OnLeave
 }

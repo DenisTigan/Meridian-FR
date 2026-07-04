@@ -9,17 +9,17 @@ import {
 const navItems = [
   { name: 'Dashboard', path: '/', icon: LayoutDashboard, active: true },
   { name: 'Directory', path: '/directory', icon: Users, active: false },
-  { name: 'Profile', path: '/profile', icon: UserCircle, active: false },
+  { name: 'Profile', path: '/profile', icon: UserCircle, active: true },
   { name: 'Desk Booking', path: '/desk-booking', icon: CalendarDays, active: false },
   { name: 'Training', path: '/training', icon: GraduationCap, active: false },
   { name: 'HR Portal', path: '/hr', icon: Briefcase, active: false },
   { name: 'Onboarding', path: '/onboarding', icon: UserPlus, active: false },
   { name: 'Wiki', path: '/wiki', icon: BookOpen, active: false },
   { name: 'My Buddy', path: '/buddy', icon: MessageSquare, active: false },
-  { name: 'News', path: '/news', icon: Newspaper, active: false },
+  { name: 'News', path: '/news', icon: Newspaper, active: true },
   { name: 'Calendar', path: '/calendar', icon: Calendar, active: false },
-  { name: 'Links', path: '/links', icon: LinkIcon, active: false },
-  { name: 'Admin', path: '/admin', icon: Settings, active: false },
+  { name: 'Links', path: '/links', icon: LinkIcon, active: true },
+  { name: 'Admin', path: '/admin', icon: Settings, active: true },
 ];
 
 export function Sidebar() {
