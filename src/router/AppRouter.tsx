@@ -21,6 +21,11 @@ import DeskBookingPage from '@/pages/DeskBookingPage';
 import CalendarPage from '@/pages/CalendarPage';
 import HRTicketsPage from '@/pages/HRTicketsPage';
 import LeaveRequestsPage from '@/pages/LeaveRequestsPage';
+import TrainingPage from '@/pages/TrainingPage';
+import TrainingDetailPage from '@/pages/TrainingDetailPage';
+import WikiPage from '@/pages/WikiPage';
+import WikiArticlePage from '@/pages/WikiArticlePage';
+import WikiCategoriesAdminPage from '@/pages/admin/WikiCategoriesAdminPage';
 
 export function AppRouter() {
   return (
@@ -43,6 +48,10 @@ export function AppRouter() {
           <Route path="/calendar" element={<CalendarPage />} />
           <Route path="/hr-tickets" element={<HRTicketsPage />} />
           <Route path="/leave" element={<LeaveRequestsPage />} />
+          <Route path="/training" element={<TrainingPage />} />
+          <Route path="/training/:id" element={<TrainingDetailPage />} />
+          <Route path="/wiki" element={<WikiPage />} />
+          <Route path="/wiki/:category/:slug" element={<WikiArticlePage />} />
           
           <Route element={<RoleGuard requiredRole="Admin" />}>
             <Route path="/admin" element={<AdminPage />} />
@@ -50,6 +59,7 @@ export function AppRouter() {
             <Route path="/admin/teams" element={<TeamsPage />} />
             <Route path="/directory/:employeeId/onboarding" element={<OnboardingPage />} />
             <Route path="/buddy/admin" element={<BuddyAdminPage />} />
+            <Route path="/admin/wiki-categories" element={<WikiCategoriesAdminPage />} />
           </Route>
         </Route>
       </Route>
