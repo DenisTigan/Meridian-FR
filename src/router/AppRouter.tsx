@@ -12,6 +12,12 @@ import { AppLayout } from '@/components/layout/AppLayout';
 import { ProtectedRoute } from './ProtectedRoute';
 import { RoleGuard } from './RoleGuard';
 
+import DirectoryPage from '@/pages/DirectoryPage';
+import EmployeeDetailPage from '@/pages/EmployeeDetailPage';
+import OnboardingPage from '@/pages/OnboardingPage';
+import BuddyPage from '@/pages/BuddyPage';
+import BuddyAdminPage from '@/pages/BuddyAdminPage';
+
 export function AppRouter() {
   return (
     <Routes>
@@ -25,11 +31,17 @@ export function AppRouter() {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/news" element={<AnnouncementsPage />} />
           <Route path="/links" element={<QuickLinksPage />} />
+          <Route path="/directory" element={<DirectoryPage />} />
+          <Route path="/directory/:id" element={<EmployeeDetailPage />} />
+          <Route path="/onboarding" element={<OnboardingPage />} />
+          <Route path="/buddy" element={<BuddyPage />} />
           
           <Route element={<RoleGuard requiredRole="Admin" />}>
             <Route path="/admin" element={<AdminPage />} />
             <Route path="/admin/departments" element={<DepartmentsPage />} />
             <Route path="/admin/teams" element={<TeamsPage />} />
+            <Route path="/directory/:employeeId/onboarding" element={<OnboardingPage />} />
+            <Route path="/buddy/admin" element={<BuddyAdminPage />} />
           </Route>
         </Route>
       </Route>
