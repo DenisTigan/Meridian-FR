@@ -17,6 +17,8 @@ import EmployeeDetailPage from '@/pages/EmployeeDetailPage';
 import OnboardingPage from '@/pages/OnboardingPage';
 import BuddyPage from '@/pages/BuddyPage';
 import BuddyAdminPage from '@/pages/BuddyAdminPage';
+import DeskBookingPage from '@/pages/DeskBookingPage';
+import CalendarPage from '@/pages/CalendarPage';
 
 export function AppRouter() {
   return (
@@ -35,6 +37,8 @@ export function AppRouter() {
           <Route path="/directory/:id" element={<EmployeeDetailPage />} />
           <Route path="/onboarding" element={<OnboardingPage />} />
           <Route path="/buddy" element={<BuddyPage />} />
+          <Route path="/desk-booking" element={<DeskBookingPage />} />
+          <Route path="/calendar" element={<CalendarPage />} />
           
           <Route element={<RoleGuard requiredRole="Admin" />}>
             <Route path="/admin" element={<AdminPage />} />
